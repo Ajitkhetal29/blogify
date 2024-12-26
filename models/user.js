@@ -61,8 +61,6 @@ userSchema.static(
       .update(password)
       .digest("hex");
 
-    console.log(hashedPassword === userProvidedHash);
-
     if (hashedPassword !== userProvidedHash)
       throw new Error("Incorrect Password");
 
